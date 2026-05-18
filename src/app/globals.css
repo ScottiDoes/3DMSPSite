@@ -1,26 +1,85 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --bg:         #0D0D0D;
+  --white:      #FFFFFF;
+  --pink:       #FF0099;
+  --green:      #00FF85;
+  --blue:       #1E90FF;
+
+  /* Derived */
+  --pink-dim:   rgba(255, 0, 153, 0.12);
+  --green-dim:  rgba(0, 255, 133, 0.10);
+  --blue-dim:   rgba(30, 144, 255, 0.10);
+
+  --text:       #FFFFFF;
+  --text-muted: rgba(255, 255, 255, 0.45);
+  --border:     rgba(255, 0, 153, 0.18);
+
+  /* Card glass */
+  --card-bg:    rgba(20, 20, 28, 0.35);
+  --card-blur:  blur(32px) saturate(160%);
+  --card-border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans:    var(--font-inter);
+  --font-display: var(--font-space-grotesk);
+  --color-background: var(--bg);
+  --color-foreground: var(--white);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: var(--font-inter), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
 }
+
+/* Stroke/outline text in hot pink */
+.text-stroke {
+  -webkit-text-stroke: 1.5px var(--pink);
+  color: transparent;
+}
+
+/* Neon glows */
+.glow-pink  { text-shadow: 0 0 25px rgba(255,0,153,0.7), 0 0 60px rgba(255,0,153,0.3); }
+.glow-green { text-shadow: 0 0 25px rgba(0,255,133,0.7), 0 0 60px rgba(0,255,133,0.3); }
+.glow-blue  { text-shadow: 0 0 25px rgba(30,144,255,0.7), 0 0 60px rgba(30,144,255,0.3); }
+
+/* Gradient text — pink → green */
+.gradient-text {
+  background: linear-gradient(90deg, #FF0099 0%, #00FF85 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Reusable glass card — note: backdrop-filter is injected from layout.tsx
+   because Tailwind v4's PostCSS strips it from CSS files. */
+.glass-card {
+  background: rgba(20, 20, 28, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 6px;
+}
+
+/* Hero entrance animations */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.hero-line-1 { animation: fadeUp 0.9s cubic-bezier(0.16,1,0.3,1) 0.2s both; }
+.hero-line-2 { animation: fadeUp 0.9s cubic-bezier(0.16,1,0.3,1) 0.4s both; }
+.hero-line-3 { animation: fadeUp 0.9s cubic-bezier(0.16,1,0.3,1) 0.55s both; }
+.hero-cta    { animation: fadeUp 0.7s cubic-bezier(0.16,1,0.3,1) 0.7s both; }
+
+/* Thin scrollbar */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--pink); border-radius: 2px; }
