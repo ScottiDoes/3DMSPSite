@@ -70,19 +70,25 @@ export default function Hero() {
           </span>
         </h1>
 
-        <p
-          className="hero-line-2"
+        <div
+          className="hero-line-2 glass-card"
           style={{
-            fontSize: "clamp(1rem, 2vw, 1.2rem)",
-            color: "var(--text-muted)",
             maxWidth: 520,
             margin: "0 auto 2.5rem",
-            lineHeight: 1.7,
+            padding: "1rem 1.5rem",
+            borderRadius: 8,
           }}
         >
-          Proactive monitoring, enterprise security, and cloud infrastructure
-          built for businesses that can&apos;t afford downtime.
-        </p>
+          <p style={{
+            fontSize: "clamp(1rem, 2vw, 1.2rem)",
+            color: "var(--white)",
+            lineHeight: 1.7,
+            margin: 0,
+          }}>
+            Proactive monitoring, enterprise security, and cloud infrastructure
+            built for businesses that can&apos;t afford downtime.
+          </p>
+        </div>
 
         <div
           className="hero-cta"

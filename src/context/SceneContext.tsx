@@ -14,10 +14,10 @@ export interface Waypoint {
 // Adapted from the reference site's extracted waypoints, tuned for our IT scene
 export const WAYPOINTS: Record<SectionId, Waypoint> = {
   hero: {
-    position: [0, 4, 9],
-    lookAt: [-1.6, 7, -15],
-    fov: 50,
-    rotateMode: "none",
+    position: [3.2, -1.05, -1.0],
+    lookAt: [-2.5, 3.5, -4.5],
+    fov: 80,
+    rotateMode: "rotTheta",
   },
   services: {
     position: [0, 6.5, 0],

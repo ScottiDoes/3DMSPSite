@@ -4,6 +4,7 @@ import { useRef, useMemo } from "react";
 import { useFrame, useThree } from "@react-three/fiber";
 import * as THREE from "three";
 import { useScene, WAYPOINTS } from "@/context/SceneContext";
+import { ServerRacks } from "./ServerRacks";
 
 // ─── Camera Controller ────────────────────────────────────────────────────────
 const LERP_FACTOR = 1.4;
@@ -249,6 +250,9 @@ export function WorldScene() {
 
       {/* Long-range backbone lines */}
       <Lines nodes={allNodes} maxDist={9} color="#FF0099" opacity={0.04} />
+
+      {/* ── Server rack row — hero zone ── */}
+      <ServerRacks />
     </>
   );
 }
