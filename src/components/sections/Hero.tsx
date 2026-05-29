@@ -60,13 +60,13 @@ export default function Hero() {
           }}
         >
           <span className="hero-line-1" style={{ display: "block", color: "var(--white)" }}>
-            Migrations
+            Fully Migrated.
           </span>
           <span className="hero-line-2 text-stroke" style={{ display: "block" }}>
-            That Actually
+            Fully
           </span>
           <span className="hero-line-3" style={{ display: "block", color: "var(--white)" }}>
-            Stick.
+            Operational.
           </span>
         </h1>
 
