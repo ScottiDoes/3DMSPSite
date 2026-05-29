@@ -79,6 +79,27 @@ body {
 .hero-line-3 { animation: fadeUp 0.9s cubic-bezier(0.16,1,0.3,1) 0.55s both; }
 .hero-cta    { animation: fadeUp 0.7s cubic-bezier(0.16,1,0.3,1) 0.7s both; }
 
+/* Grid backdrop — faint lines panning slowly (see GridBackdrop.tsx) */
+.backdrop-grid {
+  position: absolute;
+  inset: -48px;
+  background-image:
+    linear-gradient(to right,  rgba(255, 0, 153, 0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 0, 153, 0.06) 1px, transparent 1px);
+  background-size: 48px 48px;
+  animation: gridPan 40s linear infinite;
+  will-change: transform;
+}
+
+@keyframes gridPan {
+  from { transform: translate(0, 0); }
+  to   { transform: translate(48px, 48px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .backdrop-grid { animation: none; }
+}
+
 /* Thin scrollbar */
 ::-webkit-scrollbar { width: 4px; }
 ::-webkit-scrollbar-track { background: var(--bg); }
