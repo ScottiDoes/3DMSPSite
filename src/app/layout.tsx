@@ -17,9 +17,9 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "Nevada James Endpoint Partners — NinjaOne Implementation",
+  title: "Nevada James Endpoint Partners — NinjaOne EMM Migrations for SLED",
   description:
-    "Mid-market and enterprise NinjaOne implementation and deployment by Nevada James Endpoint Partners.",
+    "Enterprise EMM migrations onto NinjaOne for State, Local & Education organizations — workflows, automations, and reporting intact. By Nevada James Endpoint Partners.",
 };
 
 export default function RootLayout({

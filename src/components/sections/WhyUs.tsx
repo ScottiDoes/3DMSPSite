@@ -8,15 +8,15 @@ gsap.registerPlugin(ScrollTrigger);
 
 const stats = [
   { value: 20,  suffix: "+",   label: "Years Enterprise Endpoint Experience", color: "var(--pink)"  },
-  { value: 1,   suffix: "st",  label: "NinjaOne Marquee Implementation Partner", color: "var(--green)" },
-  { value: 500, suffix: "+",   label: "Enterprise Endpoints Deployed",        color: "var(--blue)"  },
-  { value: 90,  suffix: "day", label: "First Reference Implementation Target", color: "var(--pink)"  },
+  { value: 100, suffix: "%",   label: "Focused on SLED Migrations", color: "var(--green)" },
+  { value: 500, suffix: "+",   label: "Enterprise Endpoints Migrated",        color: "var(--blue)"  },
+  { value: 50,  suffix: "",    label: "Fortune 50 Endpoints Operated", color: "var(--pink)"  },
 ];
 
 const pillars = [
-  { title: "Enterprise Practitioner, Not an MSP", body: "Nevada James Endpoint Partners was built by people who have delivered complex endpoint management at scale — not generalists learning NinjaOne alongside your deployment." },
-  { title: "Methodology Before Technology",       body: "A successful deployment starts with discovery, not configuration. We define success, scope your environment, and build the delivery plan before a single setting is touched." },
-  { title: "Sustainable Outcomes",               body: "Implementations succeed when your team can own the platform. We build the internal processes, runbooks, and training that make that real — not just a working deployment at go-live." },
+  { title: "Expertise Inside What You're Leaving", body: "Most partners only learn NinjaOne. We've spent careers operating the leading enterprise EMM platforms at Fortune 500 scale — so we understand what you're migrating away from in the detail required to do it right." },
+  { title: "Built for SLED Realities",            body: "State, Local & Education organizations migrate under procurement constraints, compliance requirements, and lean IT teams. Our methodology is built for the public-sector reality — not retrofitted to it." },
+  { title: "Methodology Before Technology",       body: "A successful migration starts with discovery, not configuration. We define success, scope your environment, and build the delivery plan before a single setting is touched." },
 ];
 
 function AnimatedNumber({ target, suffix, color }: { target: number; suffix: string; color: string }) {

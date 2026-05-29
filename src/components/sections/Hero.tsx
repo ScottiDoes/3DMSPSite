@@ -46,7 +46,7 @@ export default function Hero() {
             marginBottom: "1.5rem",
           }}
         >
-          NinjaOne Implementation Partner
+          NinjaOne EMM Migration &amp; Implementation Partner
         </p>
 
         <h1
@@ -60,7 +60,7 @@ export default function Hero() {
           }}
         >
           <span className="hero-line-1" style={{ display: "block", color: "var(--white)" }}>
-            Deployments
+            Migrations
           </span>
           <span className="hero-line-2 text-stroke" style={{ display: "block" }}>
             That Actually
@@ -85,9 +85,9 @@ export default function Hero() {
             lineHeight: 1.7,
             margin: 0,
           }}>
-            Mid-market and enterprise teams adopt NinjaOne for its power.
-            Nevada James Endpoint Partners ensures they actually unlock it — with a structured
-            implementation methodology built by enterprise practitioners.
+            We migrate State, Local &amp; Education organizations onto NinjaOne — workflows,
+            automations, and reporting intact — with first-hand expertise inside the
+            platforms you&apos;re leaving.
           </p>
         </div>
 

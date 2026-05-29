@@ -7,10 +7,9 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 const projects = [
-  { client: "Discovery & Scoping",           tags: ["Environment Assessment", "Success Definition"],   outcome: "We map your endpoint environment, toolchain dependencies, and operational maturity before any configuration begins. Success metrics are defined and agreed upon before delivery starts." },
-  { client: "Reference Implementation",      tags: ["NinjaOne Deployment", "Joint Delivery"],           outcome: "Structured, documented deployment with NinjaOne SE involvement where applicable. Each implementation produces reusable delivery artifacts and a reference case study for the partner program." },
-  { client: "Enablement & Handoff",          tags: ["Team Training", "Internal Runbooks"],              outcome: "We build the operational cadences, runbooks, and training your team needs to own NinjaOne after go-live. Sustainability is the deliverable — not just a working deployment." },
-  { client: "Partner Program Development",   tags: ["Methodology Documentation", "Co-Sell Framework"], outcome: "Templates, onboarding frameworks, and delivery standards that scale. Built for NinjaOne and future services partners to replicate proven implementation patterns across new accounts." },
+  { client: "Discovery & Scoping",           tags: ["Environment Assessment", "Success Definition"],   outcome: "We map your existing EMM platform, toolchain dependencies, and operational maturity before any configuration begins. Success metrics are defined and agreed upon before delivery starts." },
+  { client: "Migration & Delivery",          tags: ["EMM Migration", "Joint Delivery"],                 outcome: "Structured, documented migration onto NinjaOne with workflows, automations, and reporting carried over intact. Each engagement produces reusable delivery artifacts and a reference case study for the partner program." },
+  { client: "Enablement & Handoff",          tags: ["Team Training", "Internal Runbooks"],              outcome: "We build the operational cadences, runbooks, and training your team needs to own NinjaOne after go-live. Sustainability is the deliverable — not just a working migration." },
 ];
 
 export default function Work() {

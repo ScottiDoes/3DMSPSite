@@ -7,12 +7,12 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 const services = [
-  { icon: "⬡", title: "NinjaOne Implementation",       desc: "End-to-end deployment for mid-market and enterprise environments. We scope your environment, configure NinjaOne to your operational requirements, and hand off a working system your team can sustain." },
-  { icon: "◎", title: "Reference Methodology",          desc: "A documented, repeatable delivery framework tailored by environment size and complexity — built on 20+ years of enterprise endpoint management and refined across some of the most demanding deployments in the industry." },
-  { icon: "⟳", title: "Onboarding & Enablement",       desc: "Implementation is only half the work. We build internal playbooks, train your team, and establish the operational cadences that keep NinjaOne producing value long after go-live." },
-  { icon: "⚡", title: "Co-Sell Support",               desc: "For NinjaOne sales and SE teams: Nevada James Endpoint Partners enters active opportunities as the credentialed implementation partner — giving prospects a defined path to production and the confidence to commit." },
-  { icon: "🛡", title: "Enterprise Endpoint Strategy",  desc: "Pre-deployment assessment of your endpoint environment, toolchain, and operational maturity. We identify gaps, define success metrics, and build the delivery plan before a single agent is installed." },
-  { icon: "☁", title: "Services Partner Playbook",     desc: "Onboarding templates, discovery frameworks, and delivery standards that scale. Built for organizations formalizing a NinjaOne services practice from the ground up." },
+  { icon: "⬡", title: "EMM Migrations",                desc: "Established enterprise EMM platforms lifted onto NinjaOne with workflows, automations, and reporting intact. We translate what made your existing setup work — rather than rebuilding it from scratch and hoping." },
+  { icon: "◎", title: "Reference Methodology",          desc: "A documented, repeatable migration framework scoped by environment size and complexity — built on 20+ years of enterprise endpoint management and refined across some of the most demanding deployments in the industry." },
+  { icon: "⟳", title: "Onboarding & Enablement",       desc: "Migration is only half the work. We build internal playbooks, train your team, and establish the operational cadences that keep NinjaOne producing value long after go-live." },
+  { icon: "🏛", title: "SLED Specialization",          desc: "State, Local & Education environments carry requirements most partners don't account for — procurement cycles, compliance, and constrained IT teams. We deliver migrations built for the public-sector reality." },
+  { icon: "🛡", title: "Enterprise Endpoint Strategy",  desc: "Pre-migration assessment of your endpoint environment, toolchain, and operational maturity. We identify gaps, define success metrics, and build the delivery plan before a single agent is installed." },
+  { icon: "⚡", title: "Co-Sell Support",               desc: "For NinjaOne sales and SE teams: Nevada James Endpoint Partners enters active up-market opportunities as the credentialed migration partner — giving prospects a defined path to production and the confidence to commit." },
 ];
 
 export default function Services() {
@@ -40,7 +40,7 @@ export default function Services() {
             What We Do
           </p>
           <h2 style={{ fontFamily: "var(--font-space-grotesk)", fontSize: "clamp(2rem, 4vw, 3.5rem)", fontWeight: 700, letterSpacing: "-0.03em", lineHeight: 1.05, maxWidth: 540 }}>
-            The implementation practice NinjaOne{" "}
+            The migration practice NinjaOne{" "}
             <span className="gradient-text">deployments actually need.</span>
           </h2>
         </div>
