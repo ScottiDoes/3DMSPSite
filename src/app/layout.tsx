@@ -17,9 +17,9 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "Apex IT Solutions — Managed IT Services",
+  title: "Nevada James Endpoint Partners — NinjaOne Implementation",
   description:
-    "Enterprise-grade managed IT services, cybersecurity, cloud infrastructure, and 24/7 support for growing businesses.",
+    "Mid-market and enterprise NinjaOne implementation and deployment by Nevada James Endpoint Partners.",
 };
 
 export default function RootLayout({

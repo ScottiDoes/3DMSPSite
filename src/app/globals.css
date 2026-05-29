@@ -4,12 +4,12 @@
   --bg:         #0D0D0D;
   --white:      #FFFFFF;
   --pink:       #FF0099;
-  --green:      #00FF85;
+  --green:      #5d009c;
   --blue:       #1E90FF;
 
   /* Derived */
   --pink-dim:   rgba(255, 0, 153, 0.12);
-  --green-dim:  rgba(0, 255, 133, 0.10);
+  --green-dim:  rgba(93, 0, 156, 0.10);
   --blue-dim:   rgba(30, 144, 255, 0.10);
 
   --text:       #FFFFFF;
@@ -49,12 +49,12 @@ body {
 
 /* Neon glows */
 .glow-pink  { text-shadow: 0 0 25px rgba(255,0,153,0.7), 0 0 60px rgba(255,0,153,0.3); }
-.glow-green { text-shadow: 0 0 25px rgba(0,255,133,0.7), 0 0 60px rgba(0,255,133,0.3); }
+.glow-green { text-shadow: 0 0 25px rgba(93,0,156,0.7), 0 0 60px rgba(93,0,156,0.3); }
 .glow-blue  { text-shadow: 0 0 25px rgba(30,144,255,0.7), 0 0 60px rgba(30,144,255,0.3); }
 
 /* Gradient text — pink → green */
 .gradient-text {
-  background: linear-gradient(90deg, #FF0099 0%, #00FF85 100%);
+  background: linear-gradient(90deg, #FF0099 0%, #5d009c 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;

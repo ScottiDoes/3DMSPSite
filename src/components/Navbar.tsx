@@ -3,10 +3,10 @@
 import { useEffect, useState } from "react";
 
 const links = [
-  { label: "Services", href: "#services" },
-  { label: "Why Us", href: "#why-us" },
-  { label: "Work", href: "#work" },
-  { label: "Contact", href: "#contact" },
+  { label: "Services",    href: "#services" },
+  { label: "Our Edge",    href: "#why-us"   },
+  { label: "Engagements", href: "#work"     },
+  { label: "Contact",     href: "#contact"  },
 ];
 
 export default function Navbar() {
@@ -55,7 +55,7 @@ export default function Navbar() {
             letterSpacing: "-0.02em",
           }}
         >
-          APEX<span style={{ color: "var(--white)" }}> IT</span>
+          NJ<span style={{ color: "var(--white)" }}> ENDPOINT PARTNERS</span>
         </a>
 
         {/* Links */}
@@ -119,7 +119,7 @@ export default function Navbar() {
             el.style.color = "var(--pink)";
           }}
         >
-          Get a Quote
+          Book a Call
         </a>
       </nav>
     </header>

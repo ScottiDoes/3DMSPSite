@@ -37,16 +37,16 @@ export default function Contact() {
             Get in Touch
           </p>
           <h2 style={{ fontFamily: "var(--font-space-grotesk)", fontSize: "clamp(2rem, 4vw, 3.5rem)", fontWeight: 700, letterSpacing: "-0.03em", lineHeight: 1.05, marginBottom: "1.5rem" }}>
-            Let&apos;s build something{" "}
-            <span className="text-stroke">reliable.</span>
+            Let&apos;s talk{" "}
+            <span className="text-stroke">implementation.</span>
           </h2>
           <p style={{ color: "var(--text-muted)", lineHeight: 1.7, marginBottom: "2.5rem", maxWidth: 400, fontSize: "0.925rem" }}>
-            Start with a free 30-minute IT assessment. We&apos;ll review your current setup, identify gaps, and give you an honest picture — no sales pitch.
+            Schedule a 45-minute working session to discuss your NinjaOne environment, deployment goals, and how Nevada James Endpoint Partners can help. No pitch — just a direct conversation.
           </p>
 
           <div style={{ display: "flex", flexDirection: "column", gap: "0.9rem" }}>
             {[
-              { icon: "✉", text: "hello@apexitsolutions.com" },
+              { icon: "✉", text: "hello@nevadajames.com" },
               { icon: "✆", text: "(555) 400-0000" },
             ].map(item => (
               <div key={item.text} style={{ display: "flex", alignItems: "center", gap: "0.75rem" }}>
@@ -56,7 +56,7 @@ export default function Contact() {
             ))}
             <div style={{ display: "flex", alignItems: "center", gap: "0.75rem" }}>
               <span style={{ display: "inline-block", width: 8, height: 8, borderRadius: "50%", background: "var(--green)", boxShadow: "0 0 8px var(--green)", flexShrink: 0 }} />
-              <span style={{ color: "var(--text-muted)", fontSize: "0.875rem" }}>Currently accepting new clients</span>
+              <span style={{ color: "var(--text-muted)", fontSize: "0.875rem" }}>Currently taking implementation engagements</span>
             </div>
           </div>
         </div>
@@ -83,21 +83,21 @@ export default function Contact() {
             </label>
 
             <label style={{ display: "flex", flexDirection: "column", gap: "0.4rem" }}>
-              <span style={{ fontSize: "0.7rem", color: "var(--text-muted)", letterSpacing: "0.06em", textTransform: "uppercase" }}>Company Size</span>
+              <span style={{ fontSize: "0.7rem", color: "var(--text-muted)", letterSpacing: "0.06em", textTransform: "uppercase" }}>NinjaOne Status</span>
               <select style={{ ...inputStyle, cursor: "pointer" }}
                 onFocus={e => (e.currentTarget.style.borderColor = "var(--pink)")}
                 onBlur={e  => (e.currentTarget.style.borderColor = "rgba(255,0,153,0.2)")}>
-                <option value="">Select range</option>
-                <option>1–10 employees</option>
-                <option>11–50 employees</option>
-                <option>51–200 employees</option>
-                <option>200+ employees</option>
+                <option value="">Select one</option>
+                <option>Evaluating NinjaOne</option>
+                <option>Recently purchased, not yet deployed</option>
+                <option>Partial deployment in progress</option>
+                <option>Deployed but underutilized</option>
               </select>
             </label>
 
             <label style={{ display: "flex", flexDirection: "column", gap: "0.4rem" }}>
-              <span style={{ fontSize: "0.7rem", color: "var(--text-muted)", letterSpacing: "0.06em", textTransform: "uppercase" }}>Biggest IT Challenge</span>
-              <textarea rows={4} placeholder="Tell us what's keeping you up at night..." style={{ ...inputStyle, resize: "vertical" }}
+              <span style={{ fontSize: "0.7rem", color: "var(--text-muted)", letterSpacing: "0.06em", textTransform: "uppercase" }}>Your Environment</span>
+              <textarea rows={4} placeholder="Tell us about your current environment and what you're trying to accomplish..." style={{ ...inputStyle, resize: "vertical" }}
                 onFocus={e => (e.currentTarget.style.borderColor = "var(--pink)")}
                 onBlur={e  => (e.currentTarget.style.borderColor = "rgba(255,0,153,0.2)")} />
             </label>
@@ -105,7 +105,7 @@ export default function Contact() {
             <button type="submit" style={{ padding: "0.875rem", background: "var(--pink)", color: "#0D0D0D", border: "none", borderRadius: 4, fontWeight: 700, fontSize: "0.9rem", letterSpacing: "0.04em", cursor: "pointer", transition: "opacity 0.2s, box-shadow 0.2s" }}
               onMouseEnter={e => { e.currentTarget.style.opacity = "0.88"; e.currentTarget.style.boxShadow = "0 0 24px rgba(255,0,153,0.5)"; }}
               onMouseLeave={e => { e.currentTarget.style.opacity = "1";    e.currentTarget.style.boxShadow = "none"; }}>
-              Request Free Assessment →
+              Request a Discovery Call →
             </button>
           </form>
         </div>

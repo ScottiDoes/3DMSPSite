@@ -7,12 +7,12 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 const services = [
-  { icon: "⬡", title: "Managed IT Support",     desc: "24/7 helpdesk and on-site support. Your team stays productive while we handle every ticket, from password resets to hardware failures." },
-  { icon: "🛡", title: "Cybersecurity",           desc: "Endpoint protection, threat monitoring, phishing defense, and compliance audits — layered security that keeps attackers out." },
-  { icon: "☁", title: "Cloud Infrastructure",    desc: "Microsoft 365, Azure, and AWS migrations. We design, deploy, and manage cloud environments built for reliability and cost control." },
-  { icon: "⚡", title: "Network & Connectivity",  desc: "Firewall management, SD-WAN, VPN, and Wi-Fi design. Fast, secure connectivity across all your sites and remote workers." },
-  { icon: "⟳", title: "Backup & Disaster Recovery", desc: "Automated backups, tested recovery plans, and business continuity strategy so a ransomware hit or outage doesn't end your week." },
-  { icon: "◎", title: "IT Strategy & vCIO",      desc: "Quarterly roadmaps, vendor management, and budget planning. A fractional CIO perspective without the full-time executive salary." },
+  { icon: "⬡", title: "NinjaOne Implementation",       desc: "End-to-end deployment for mid-market and enterprise environments. We scope your environment, configure NinjaOne to your operational requirements, and hand off a working system your team can sustain." },
+  { icon: "◎", title: "Reference Methodology",          desc: "A documented, repeatable delivery framework tailored by environment size and complexity — built on 20+ years of enterprise endpoint management and refined across some of the most demanding deployments in the industry." },
+  { icon: "⟳", title: "Onboarding & Enablement",       desc: "Implementation is only half the work. We build internal playbooks, train your team, and establish the operational cadences that keep NinjaOne producing value long after go-live." },
+  { icon: "⚡", title: "Co-Sell Support",               desc: "For NinjaOne sales and SE teams: Nevada James Endpoint Partners enters active opportunities as the credentialed implementation partner — giving prospects a defined path to production and the confidence to commit." },
+  { icon: "🛡", title: "Enterprise Endpoint Strategy",  desc: "Pre-deployment assessment of your endpoint environment, toolchain, and operational maturity. We identify gaps, define success metrics, and build the delivery plan before a single agent is installed." },
+  { icon: "☁", title: "Services Partner Playbook",     desc: "Onboarding templates, discovery frameworks, and delivery standards that scale. Built for organizations formalizing a NinjaOne services practice from the ground up." },
 ];
 
 export default function Services() {
@@ -40,8 +40,8 @@ export default function Services() {
             What We Do
           </p>
           <h2 style={{ fontFamily: "var(--font-space-grotesk)", fontSize: "clamp(2rem, 4vw, 3.5rem)", fontWeight: 700, letterSpacing: "-0.03em", lineHeight: 1.05, maxWidth: 540 }}>
-            Every service your business needs,{" "}
-            <span className="gradient-text">under one roof.</span>
+            The implementation practice NinjaOne{" "}
+            <span className="gradient-text">deployments actually need.</span>
           </h2>
         </div>
 

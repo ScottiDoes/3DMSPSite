@@ -46,7 +46,7 @@ export default function Hero() {
             marginBottom: "1.5rem",
           }}
         >
-          Managed IT Services
+          NinjaOne Implementation Partner
         </p>
 
         <h1
@@ -60,13 +60,13 @@ export default function Hero() {
           }}
         >
           <span className="hero-line-1" style={{ display: "block", color: "var(--white)" }}>
-            Infrastructure
+            Deployments
           </span>
           <span className="hero-line-2 text-stroke" style={{ display: "block" }}>
-            That Never
+            That Actually
           </span>
           <span className="hero-line-3" style={{ display: "block", color: "var(--white)" }}>
-            Sleeps.
+            Stick.
           </span>
         </h1>
 
@@ -85,8 +85,9 @@ export default function Hero() {
             lineHeight: 1.7,
             margin: 0,
           }}>
-            Proactive monitoring, enterprise security, and cloud infrastructure
-            built for businesses that can&apos;t afford downtime.
+            Mid-market and enterprise teams adopt NinjaOne for its power.
+            Nevada James Endpoint Partners ensures they actually unlock it — with a structured
+            implementation methodology built by enterprise practitioners.
           </p>
         </div>
 
@@ -115,7 +116,7 @@ export default function Hero() {
             onMouseEnter={(e) => (e.currentTarget.style.opacity = "0.85")}
             onMouseLeave={(e) => (e.currentTarget.style.opacity = "1")}
           >
-            Book a Free Assessment
+            Book a Discovery Call
           </a>
           <a
             href="#services"
@@ -141,7 +142,7 @@ export default function Hero() {
               e.currentTarget.style.color = "var(--white)";
             }}
           >
-            View Services →
+            Our Approach →
           </a>
         </div>
       </div>

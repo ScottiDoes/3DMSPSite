@@ -7,10 +7,10 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 const projects = [
-  { client: "Meridian Law Group",        tags: ["Microsoft 365 Migration", "Cybersecurity"],  outcome: "Migrated 45 users to M365 with zero downtime. Phishing attempts dropped 94% after deploying MFA and email filtering." },
-  { client: "Cascade Manufacturing",     tags: ["Network Overhaul", "Managed Support"],        outcome: "Redesigned factory floor network with redundant links. Response SLA cut from 4hrs to 12min average." },
-  { client: "Summit Financial Advisors", tags: ["Compliance", "Backup & DR"],                  outcome: "Achieved SEC cybersecurity rule compliance. Implemented 3-2-1 backup strategy with quarterly recovery tests." },
-  { client: "Blue Ridge Medical",        tags: ["HIPAA", "Cloud Infrastructure"],              outcome: "Built HIPAA-compliant Azure environment. Unified 3 clinics onto a single secure platform." },
+  { client: "Discovery & Scoping",           tags: ["Environment Assessment", "Success Definition"],   outcome: "We map your endpoint environment, toolchain dependencies, and operational maturity before any configuration begins. Success metrics are defined and agreed upon before delivery starts." },
+  { client: "Reference Implementation",      tags: ["NinjaOne Deployment", "Joint Delivery"],           outcome: "Structured, documented deployment with NinjaOne SE involvement where applicable. Each implementation produces reusable delivery artifacts and a reference case study for the partner program." },
+  { client: "Enablement & Handoff",          tags: ["Team Training", "Internal Runbooks"],              outcome: "We build the operational cadences, runbooks, and training your team needs to own NinjaOne after go-live. Sustainability is the deliverable — not just a working deployment." },
+  { client: "Partner Program Development",   tags: ["Methodology Documentation", "Co-Sell Framework"], outcome: "Templates, onboarding frameworks, and delivery standards that scale. Built for NinjaOne and future services partners to replicate proven implementation patterns across new accounts." },
 ];
 
 export default function Work() {
@@ -32,11 +32,11 @@ export default function Work() {
       <div style={{ maxWidth: 1100, margin: "0 auto" }}>
 
         <p style={{ fontSize: "0.72rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: "var(--pink)", marginBottom: "0.75rem" }}>
-          Case Studies
+          How We Engage
         </p>
         <h2 style={{ fontFamily: "var(--font-space-grotesk)", fontSize: "clamp(2rem, 4vw, 3.5rem)", fontWeight: 700, letterSpacing: "-0.03em", lineHeight: 1.05, marginBottom: "3.5rem", maxWidth: 500 }}>
-          Problems we&apos;ve{" "}
-          <span className="gradient-text">already solved.</span>
+          A structured path from{" "}
+          <span className="gradient-text">contract to production.</span>
         </h2>
 
         {/* Project rows — glass on each row card */}

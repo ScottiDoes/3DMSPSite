@@ -51,10 +51,10 @@ export default function Home() {
               letterSpacing: "-0.02em",
             }}
           >
-            APEX IT
+            NJEP
           </span>
           <span style={{ color: "var(--text-muted)", fontSize: "0.8rem" }}>
-            © {new Date().getFullYear()} Apex IT Solutions. All rights reserved.
+            © {new Date().getFullYear()} Nevada James Endpoint Partners. All rights reserved.
           </span>
         </div>
       </footer>

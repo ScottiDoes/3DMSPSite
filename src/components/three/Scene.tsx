@@ -9,25 +9,42 @@ import { ServerRacks } from "./ServerRacks";
 // ─── Camera Controller ────────────────────────────────────────────────────────
 const LERP_FACTOR = 1.4;
 
+// Hero dolly: right-side floor level ↔ left-side top-of-rack, 90s round trip
+const HERO_A_POS    = new THREE.Vector3( 3.2, -1.05, -1.0);
+const HERO_A_LOOK   = new THREE.Vector3(-2.5,  3.5,  -4.5);
+const HERO_B_POS    = new THREE.Vector3(-3.2,  2.0,  -1.0);
+const HERO_B_LOOK   = new THREE.Vector3( 2.5, -0.5,  -4.5);
+const HERO_HALF_PERIOD = 90; // seconds per direction
+
 export function CameraController() {
   const { camera } = useThree();
   const { activeSection, mouse } = useScene();
   const currentLookAt = useRef(new THREE.Vector3(-1.6, 7, -15));
   const targetLookAt  = useRef(new THREE.Vector3(-1.6, 7, -15));
   const targetPos     = useRef(new THREE.Vector3(0, 4, 9));
+  const heroTime      = useRef(0);
 
   useFrame((_, delta) => {
     const wp = WAYPOINTS[activeSection];
     const dt = Math.min(delta, 0.05);
 
-    targetPos.current.set(...wp.position);
-    targetLookAt.current.set(...wp.lookAt);
-
-    // Subtle mouse parallax
-    if (wp.rotateMode === "rotTheta") {
+    if (activeSection === "hero") {
+      heroTime.current += dt;
+      // Smooth sine oscillation: 0→1→0 over 90s
+      const osc = (Math.sin((heroTime.current / HERO_HALF_PERIOD) * Math.PI - Math.PI / 2) + 1) / 2;
+      targetPos.current.lerpVectors(HERO_A_POS, HERO_B_POS, osc);
+      targetLookAt.current.lerpVectors(HERO_A_LOOK, HERO_B_LOOK, osc);
+      // Subtle mouse parallax on top of the dolly
       targetPos.current.x += mouse.x * 0.4;
-    } else if (wp.rotateMode === "rotZ") {
-      targetPos.current.y += mouse.y * 0.2;
+    } else {
+      heroTime.current = 0; // reset so next hero visit starts from A
+      targetPos.current.set(...wp.position);
+      targetLookAt.current.set(...wp.lookAt);
+      if (wp.rotateMode === "rotTheta") {
+        targetPos.current.x += mouse.x * 0.4;
+      } else if (wp.rotateMode === "rotZ") {
+        targetPos.current.y += mouse.y * 0.2;
+      }
     }
 
     camera.position.lerp(targetPos.current, LERP_FACTOR * dt);
@@ -196,7 +213,7 @@ export function WorldScene() {
       {/* Lighting */}
       <ambientLight intensity={0.2} />
       <pointLight position={[-1.6,7,-15]}  intensity={3}   color="#FF0099" distance={22} />
-      <pointLight position={[0,9.5,18]}    intensity={2}   color="#00FF85" distance={22} />
+      <pointLight position={[0,9.5,18]}    intensity={2}   color="#5d009c" distance={22} />
       <pointLight position={[15,3,0]}      intensity={2}   color="#1E90FF" distance={26} />
       <pointLight position={[14,7.5,-11]}  intensity={2}   color="#FF0099" distance={22} />
 
@@ -206,7 +223,7 @@ export function WorldScene() {
       {HERO_NODES.map((pos, i) => (
         <Node key={`h${i}`} position={pos}
           size={i === 0 ? 0.6 : 0.2 + Math.random() * 0.15}
-          color={i === 0 ? "#FF0099" : i % 2 === 0 ? "#FF0099" : "#00FF85"}
+          color={i === 0 ? "#FF0099" : i % 2 === 0 ? "#FF0099" : "#5d009c"}
           emissiveIntensity={i === 0 ? 1.5 : 0.8}
         />
       ))}
@@ -218,13 +235,13 @@ export function WorldScene() {
       {SERVICE_NODES.map((pos, i) => (
         <Node key={`s${i}`} position={pos}
           size={i === 0 ? 0.5 : 0.18 + Math.random() * 0.1}
-          color={i % 3 === 0 ? "#00FF85" : i % 3 === 1 ? "#FF0099" : "#1E90FF"}
+          color={i % 3 === 0 ? "#5d009c" : i % 3 === 1 ? "#FF0099" : "#1E90FF"}
           emissiveIntensity={0.9}
         />
       ))}
-      <Ring position={[0,9.5,18]} radius={3.2} color="#00FF85" speed={0.1} />
+      <Ring position={[0,9.5,18]} radius={3.2} color="#5d009c" speed={0.1} />
       <Ring position={[0,9.5,18]} radius={1.8} color="#FF0099" speed={0.18} />
-      <Lines nodes={SERVICE_NODES} maxDist={5} color="#00FF85" opacity={0.18} />
+      <Lines nodes={SERVICE_NODES} maxDist={5} color="#5d009c" opacity={0.18} />
 
       {/* ── Why Us zone — blue strip ── */}
       {WHYUS_NODES.map((pos, i) => (
@@ -241,11 +258,11 @@ export function WorldScene() {
       {WORK_NODES.map((pos, i) => (
         <Node key={`k${i}`} position={pos}
           size={i === 0 ? 0.55 : 0.2}
-          color={i === 0 ? "#00FF85" : i % 2 === 0 ? "#FF0099" : "#1E90FF"}
+          color={i === 0 ? "#5d009c" : i % 2 === 0 ? "#FF0099" : "#1E90FF"}
           emissiveIntensity={i === 0 ? 1.3 : 0.7}
         />
       ))}
-      <Ring position={[14,7.5,-11]} radius={2.1} color="#00FF85" speed={0.16} />
+      <Ring position={[14,7.5,-11]} radius={2.1} color="#5d009c" speed={0.16} />
       <Lines nodes={WORK_NODES} maxDist={4} color="#FF0099" opacity={0.18} />
 
       {/* Long-range backbone lines */}
